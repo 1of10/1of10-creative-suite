@@ -39,18 +39,6 @@
           "title": "(Down)Load SAM2Model"
         }
       },
-      "6": {
-        "inputs": {
-          "mask": [
-            "2",
-            0
-          ]
-        },
-        "class_type": "MaskToImage",
-        "_meta": {
-          "title": "Convert Mask to Image"
-        }
-      },
       "9": {
         "inputs": {
           "image": "input-img.jpg",
@@ -84,11 +72,30 @@
           "title": "Points Editor"
         }
       },
-      "18": {
+      "20": {
+        "inputs": {
+          "mask_threshold": 250,
+          "gaussblur_radius": 8,
+          "invert_mask": false,
+          "images": [
+            "9",
+            0
+          ],
+          "masks": [
+            "2",
+            0
+          ]
+        },
+        "class_type": "LamaRemover",
+        "_meta": {
+          "title": "Big lama Remover"
+        }
+      },
+      "24": {
         "inputs": {
           "filename_prefix": "ComfyUI",
           "images": [
-            "6",
+            "20",
             0
           ]
         },
