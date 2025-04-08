@@ -1,6 +1,10 @@
 {
     "comfyui": "ee9547ba31f5f2c1de0211a09c3fb829bd8e25e6",
     "git_custom_nodes": {
+        "https://github.com/fssorc/ComfyUI_FaceShaper": {
+            "hash": "308ed8fc92db8b30da59c58b48a5e01da013d021",
+            "disabled": false
+        },
         "https://github.com/Layer-norm/comfyui-lama-remover.git": {
             "hash": "070c0226dfda85e29f2484a9ba321cc02ef8a6b0",
             "disabled": false

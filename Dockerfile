@@ -32,8 +32,21 @@ RUN /usr/bin/yes | comfy --workspace /comfyui install --cuda-version 12.4 --nvid
 # Change working directory to ComfyUI
 WORKDIR /comfyui
 
-# Install runpod
-RUN pip install runpod requests
+# Install runpod and extra python dependencies
+RUN pip install runpod \
+    requests \
+    scikit-image \
+    insightface==0.7.3 \
+    segment_anything \
+    facexlib \
+    timm==1.0.15 \
+    ultralytics \
+    xformers \
+    accelerate \
+    transformers==4.48.3 \
+    ftfy==6.3.1
+
+
 
 # Support for the network volume
 ADD src/extra_model_paths.yaml ./
